@@ -1,0 +1,12 @@
+@font-face {
+    font-family:opensans;
+    src: url();
+}
+.logo img{
+    height: 150px;
+    width: 150px;
+}
+.fullstack{
+    height: 150px;
+    width: 300px;
+}
