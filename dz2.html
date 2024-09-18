@@ -5,97 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+<!-- Подключаем jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Подключаем плагин jQuery Mask -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
 </head>
 <body>
-        <header>
-            <div class="logo">
-                <img src="images/ikonka.jpg" alt="Логотип">
-                <h3><strong>Кудряшов Родион ЭФБО-09-23</strong></h3>
-            </div>
-          <h4>Меню</h4>
-          <nav>
-            <div>
-              <ul>
-              <li style="text-decoration: none; display: inline;">
-                <a href="dz1.html">Главная</a>
-              </li>
-              <li style="text-decoration: none; display: inline;">
-                <a href="">Контакты</a>
-              </li>
-              <li style="text-decoration: none; display: inline;">
-                <a href="">Отзывы</a>
-              </li>
-              <li style="text-decoration: none; display: inline;">
-                <a href="dz2.html">Услуги</a>
-              </li>
-              <li style="text-decoration: none; display: inline;">
-                <a href="">Опыт</a>
-              </li>
-            </ul>
-            </div>
-        </nav>
-        </header>
-            <aside>
-                <h3>НАВИГАЦИЯ ПО САЙТУ</h3>
-                <ul>
-                    <li><a href="#element1">INFO</a></li>
-                    <li><a href="#element2">Frontend</a></li>
-                    <li><a href="#element3">Backend</a></li>
-                </ul>
-            </aside>
+  <header>
+      <div class="logo">
+          <img src="images/ikonka.jpg" alt="Логотип">
+          <h3><strong>Кудряшов Родион ЭФБО-09-23</strong></h3>
+      </div>
+      <h4>Меню</h4>
+      <nav>
+        <div>
+          <ul>
+          <li style="text-decoration: none; display: inline;">
+            <a href="dz1.html">Главная</a>
+          </li>
+          <li style="text-decoration: none; display: inline;">
+            <a href="">Контакты</a>
+          </li>
+          <li style="text-decoration: none; display: inline;">
+            <a href="">Отзывы</a>
+          </li>
+          <li style="text-decoration: none; display: inline;">
+            <a href="dz2.html">Услуги</a>
+          </li>
+          <li style="text-decoration: none; display: inline;">
+            <a href="">Опыт</a>
+          </li>
+        </ul>
+        </div>
+    </nav>
+  </header>
+
   <main class="main-info">
-    <div class="main-info-div">
-        <section class="main-info-div-section-img+dis">
-            <h1>
-Разработка веб-приложений
-            </h1>
-            <ul class="main-info-div-section-img+dis-list" style="list-style-type: none;">
-                <li class="main-info-div-section-img+dis-list-pl" style="display: inline-block;">
-                    <img src="./visitka.jpg" alt="business card website" class="main-info-div-section-img+dis-list-img">
-                    <p class="main-info-div-section-img+dis-list-__p">
-Сайт-визитка
-                    </p>
-                </li>
-                <li class="main-info-div-section-img+dis-list-pl" style="display: inline-block;">
-                    <img src="./corporate.jpg" alt="corporate website" class="main-info-div-section-img+dis-list-img">              <!-- Данная секция отвевает за "Витрину товаров" которую представляю я на своем сайте-->
-                    <p class="main-info-div-section-img+dis-list-__p">
-Корпоративный сайт                                                                                                                  <!-- Здесь подключены блоки img + p, связанные в список-->
-                    </p>
-                </li>
-                <li class="main-info-div-section-img+dis-list-pl" style="display: inline-block;">
-                    <img src="./web.jpg" alt="web store" class="main-info-div-section-img+dis-list-img">
-                    <p class="main-info-div-section-img+dis-list-__p">
-Интернет-магазин
-                    </p>
-                </li>
-            </ul>    
-        </section>
-          <div class="main-info-section-text-div">
-            <p class="main-info-section-text-div-__p">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Debitis obcaecati sint dignissimos sunt quis nisi eligendi saepe est aperiam 
-                vitae nesciunt magnam, doloremque sed ad earum possimus labore impedit blanditiis.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Debitis obcaecati sint dignissimos sunt quis nisi eligendi saepe est aperiam 
-                vitae nesciunt magnam, doloremque sed ad earum possimus labore impedit blanditiis.            <!-- Данный блок, как описание моих услуг-->
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Debitis obcaecati sint dignissimos sunt quis nisi eligendi saepe est aperiam 
-                vitae nesciunt magnam, doloremque sed ad earum possimus labore impedit blanditiis.
-            </p>
+      <div class="main-info-div">
+          <section class="main-info-div-section-img-dis"> 
+              <h1>Разработка веб-приложений</h1>
+              <ul class="main-info-div-section-img-dis-list" style="list-style-type: none; padding: 0;">
+                  <li style="display: inline-block; margin-right: 20px;">
+                      <img src="./visitka.jpg" alt="business card website">
+                      <p>Сайт-визитка</p>
+                      <button class="openModal">Открыть форму</button>
+                  </li>
+                  <li style="display: inline-block; margin-right: 20px;">
+                      <img src="./corporate.jpg" alt="corporate website">
+                      <p>Корпоративный сайт</p>
+                      <button class="openModal">Открыть форму</button>
+                  </li>
+                  <li style="display: inline-block;">
+                      <img src="./web.jpg" alt="web store">
+                      <p>Интернет-магазин</p>
+                      <button class="openModal">Открыть форму</button>
+                  </li>
+              </ul>    
+          </section>
+
+          <!-- Модальное окно -->
+          <div id="myModal" class="modal">
+              <div class="modal-content">
+                  <span id="closeModal">&times;</span>
+                  <form id="contactForm">
+                      <label for="name">Имя:</label>
+                      <input type="text" id="name" required><br><br>
+
+                      <label for="email">Электронная почта:</label>
+                      <input type="email" id="email" required><br><br>
+
+                      <label for="phone">Телефон:</label>
+                      <input type="text" id="phone" placeholder="+7 (___) ___-__-__" required><br><br>
+
+                      <label for="country">Страна:</label>
+                      <select id="country" required>
+                          <option value="">Выберите страну</option>
+                          <option value="rus">Россия</option>
+                          <option value="usa">США</option>
+                          <option value="deu">Германия</option>
+                      </select><br><br>
+
+                      <label for="date">Дата:</label>
+                      <input type="date" id="date" required><br><br>
+
+                      <label for="comments">Комментарии:</label>
+                      <textarea id="comments" rows="4" required></textarea><br><br>
+
+                      <button type="submit">Отправить</button>
+                  </form>
+                  <p id="successMessage" style="display:none;">Форма успешно отправлена!</p>
+              </div>
           </div>
-    </div>
-   </main>
-   <footer>
-    <h3>Мои соц.сети</h3>
-    <ul class="social-links">
-    <li>
-    <a href="https://vk.com" target="_blank" rel="noopener noreferrer"><img src="img/vk.png" alt="vk"></a>
-    </li>
-    <li>
-    <a href="https://web.telegram.org" target="_blank" rel="noopener noreferrer"><img src="img/tg.png" alt="tg"></a>
-    </li>
-  </ul>
-    <p>Все права защищены.© 2024</p>
-    </footer>      
-  </body>
+      </div>
+  </main>
+
+  <footer>
+      <h3>Мои соц.сети</h3>
+      <ul class="social-links">
+          <li><a href="https://vk.com" target="_blank"><img src="img/vk.png" alt="vk"></a></li>
+          <li><a href="https://web.telegram.org" target="_blank"><img src="img/tg.png" alt="tg"></a></li>
+      </ul>
+      <p>Все права защищены.© 2024</p>
+  </footer>
+  <script src="dz2.js"></script>
+  
+</body>
 </html>
