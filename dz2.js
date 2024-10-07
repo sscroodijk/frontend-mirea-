@@ -11,6 +11,7 @@ $(document).ready(function() {
 
     // Функция для открытия модального окна
     function openModal() {
+        resetForm(); // Сбрасываем форму перед каждым новым открытием модального окна
         modal.style.display = 'block';
     }
 
@@ -23,6 +24,13 @@ $(document).ready(function() {
     function showSuccessMessage() {
         contactForm.style.display = 'none'; // Скрыть форму
         successMessage.style.display = 'block'; // Показать сообщение
+    }
+
+    // Функция для сброса формы и подготовки к повторной отправке
+    function resetForm() {
+        contactForm.reset(); // Сбросить значения полей
+        contactForm.style.display = 'block'; // Показать форму
+        successMessage.style.display = 'none'; // Скрыть сообщение
     }
 
     // Добавляем обработчики событий для кнопок открытия модального окна
@@ -44,7 +52,16 @@ $(document).ready(function() {
     contactForm.addEventListener('submit', (event) => {
         event.preventDefault(); // Предотвращаем отправку формы по умолчанию
 
-        // Для демонстрации показываем сообщение об успешной отправке
+        // Логика отправки данных формы (здесь можно добавить AJAX запрос, если нужно)
+
+        // Показать сообщение об успешной отправке
         showSuccessMessage();
+
+        // Через 3 секунды сбросить форму и снова показать её для повторной отправки
+        setTimeout(resetForm, 3000); // Таймер для повторного отображения формы через 3 секунды
+    });
+    phoneInput.addEventListener('input', function() {
+        this.value = this.value.replace(/[^\d\+\(\)\-\s]/g, ''); // Разрешаем только цифры и спецсимволы
     });
 });
+

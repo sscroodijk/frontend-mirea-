@@ -15,12 +15,14 @@
 <body>
   <header>
       <div class="logo">
+        <div class="logo-initials">
           <img src="images/ikonka.jpg" alt="Логотип">
           <div class="initials">
           <h3><strong>Кудряшов Родион</strong></h3>
           <h3>ЭФБО-09-23</h3>
           </div>
       </div>
+    </div>
       <nav>
         <div>
           <ul>
@@ -68,37 +70,40 @@
           </section>
           <!-- Модальное окно -->
           <div id="myModal" class="modal">
-              <div class="modal-content">
-                  <span id="closeModal">&times;</span>
-                  <form id="contactForm">
-                      <label for="name">Имя:</label>
-                      <input type="text" id="name" required><br><br>
-
-                      <label for="email">Электронная почта:</label>
-                      <input type="email" id="email" required><br><br>
-
-                      <label for="phone">Телефон:</label>
-                      <input type="text" id="phone" placeholder="+7 (___) ___-__-__" required><br><br>
-
-                      <label for="country">Страна:</label>
-                      <select id="country" required>
-                          <option value="">Выберите страну</option>
-                          <option value="rus">Россия</option>
-                          <option value="usa">США</option>
-                          <option value="deu">Германия</option>
-                      </select><br><br>
-
-                      <label for="date">Дата:</label>
-                      <input type="date" id="date" required><br><br>
-
-                      <label for="comments">Комментарии:</label>
-                      <textarea id="comments" rows="4" required></textarea><br><br>
-
-                      <button type="submit">Отправить</button>
-                  </form>
-                  <p id="successMessage" style="display:none;">Форма успешно отправлена!</p>
-              </div>
-          </div>
+            <div class="modal-content">
+                <span id="closeModal">&times;</span>
+                <form id="contactForm">
+                    <h2>Свяжитесь с нами</h2>
+        
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" required><br><br>
+        
+                    <label for="email">Электронная почта:</label>
+                    <input type="email" id="email" required><br><br>
+        
+                    <label for="phone">Телефон:</label>
+                    <input type="text" id="phone" placeholder="+7 (___) ___-__-__" required><br><br>
+        
+                    <label for="country">Страна:</label>
+                    <select id="country" required>
+                        <option value="">Выберите страну</option>
+                        <option value="rus">Россия</option>
+                        <option value="usa">США</option>
+                        <option value="deu">Германия</option>
+                    </select><br><br>
+        
+                    <label for="date">Дата:</label>
+                    <input type="date" id="date" required><br><br>
+        
+                    <label for="comments">Комментарии:</label>
+                    <textarea id="comments" rows="4" required></textarea><br><br>
+        
+                    <button type="submit" class="submit-btn">Отправить</button>
+                </form>
+                <p id="successMessage" style="display:none;">Форма успешно отправлена!</p>
+            </div>
+        </div>
+      </div>        
       </div>
   </main>
 
